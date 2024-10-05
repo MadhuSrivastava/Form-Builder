@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Builder Application</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Add meta tags for SEO and social sharing -->
+  <meta name="description" content="A simple form builder application to create and manage forms.">
+</head>
+<body>
+  <!-- Left panel for dragging widgets -->
+  <div id="widget-panel" class="panel">
+    <h2>Widgets</h2>
+    <input type="text" id="widget-search" placeholder="Search widgets..." aria-label="Search widgets">
+    <div class="form-widget" data-type="text" aria-label="Text Field Widget">Text Field</div>
+    <div class="form-widget" data-type="checkbox" aria-label="Checkbox Widget">Checkbox</div>
+    <div class="form-widget" data-type="radio" aria-label="Radio Button Widget">Radio Button</div>
+    <div class="form-widget" data-type="dropdown" aria-label="Dropdown Widget">Dropdown</div>
+  </div>
+
+  <!-- Main form grid area -->
+  <div id="form-grid" class="form-grid" aria-live="polite"></div>
+
+  <!-- Right panel for properties -->
+  <div class="properties-panel" id="properties-panel">
+    <h2>Properties</h2>
+    <div id="widget-properties"></div>
+    <button id="save-button" aria-label="Save the form">Save Form</button>
+    <button id="load-button" aria-label="Load a saved form">Load Form</button>
+    <button id="undo-button" aria-label="Undo the last action">Undo</button>
+    <button id="redo-button" aria-label="Redo the last undone action">Redo</button>
+    <input type="text" id="form-name" placeholder="Form Name" required aria-label="Enter form name">
+    <button id="save-form-button" aria-label="Save form name">Save Form</button>
+    <select id="form-list" aria-label="Select a saved form"></select>
+    <button id="load-form-button" aria-label="Load the selected form">Load Form</button>
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
+  </div>
+
+  <script src="form-builder.js"></script>
+</body>
+</html>
